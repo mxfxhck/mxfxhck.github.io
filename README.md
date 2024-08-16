@@ -14,12 +14,8 @@ This repository contains the source code for my personal portfolio website, deve
 - **JavaScript**: For interactive elements
 
 ## Setup and Usage
-1. Clone this repository:
+ Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/portfolio.git
-
-2. Navigate to the project directory:
-  ```bash
+  git clone https://github.com/yourusername/portfolio.git
   cd portfolio
-
-3. Open index.html in your browser to view the portfolio.
+  ./index.html

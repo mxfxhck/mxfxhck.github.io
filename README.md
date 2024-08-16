@@ -14,8 +14,17 @@ This repository contains the source code for my personal portfolio website, deve
 - **JavaScript**: For interactive elements
 
 ## Setup and Usage
- Clone this repository:
+1. Clone this repository:
    ```bash
-  git clone https://github.com/yourusername/portfolio.git
-  cd portfolio
-  ./index.html
+   git clone https://github.com/yourusername/portfolio.git
+2. Navigate to the project directory:
+```bash
+cd portfolio
+```
+3. Open index.html in your browser to view the portfolio.
+
+## License
+* This project is licensed under the MIT License. See the LICENSE file for details.
+
+# Contact
+For any questions or inquiries, please reach out to me at mukundawadsal02@gmail.com.

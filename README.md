@@ -19,12 +19,9 @@ This repository contains the source code for my personal portfolio website, deve
    git clone https://github.com/yourusername/portfolio.git
 2. Navigate to the project directory:
 ```bash
-cd portfolio
+   cd portfolio
 ```
 3. Open index.html in your browser to view the portfolio.
 
-## License
-* This project is licensed under the MIT License. See the LICENSE file for details.
-
-# Contact
+## Contact
 For any questions or inquiries, please reach out to me at mukundawadsal02@gmail.com.

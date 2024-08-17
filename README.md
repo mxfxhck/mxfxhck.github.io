@@ -16,7 +16,7 @@ This repository contains the source code for my personal portfolio website, deve
 ## Setup and Usage
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/portfolio.git
+   git clone https://github.com/mxfxhck/mxfxhck.github.io.git
 2. Navigate to the project directory:
 ```bash
    cd portfolio

@@ -98,9 +98,10 @@ dfn {
 }
 
 h1 {
-    font-size: 2em;
-    margin: 0.67em 0
+    font-size: 2rem; /* Responsive font size */
+    margin: 0.67em 0;
 }
+
 
 mark {
     background: #ff0;
@@ -108,7 +109,7 @@ mark {
 }
 
 small {
-    font-size: 80%
+    font-size: 0.8rem;
 }
 
 sub,
@@ -331,12 +332,16 @@ body {
     z-index: 10
 }
 
-@media (max-width: 480px) {
-    .l-side-nav {
-        display: none
+/* Adjust styles for devices with a max-width of 768px */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    .container {
+        width: 100%;
+        padding: 0 10px;
     }
 }
-
 .l-main-content {
     position: relative;
     width: 100%;

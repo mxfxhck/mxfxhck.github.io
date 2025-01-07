@@ -238,6 +238,7 @@ optgroup {
     font-weight: bold
 }
 
+
 table {
     border-collapse: collapse;
     border-spacing: 0
@@ -841,7 +842,121 @@ body {
         margin-right: 0
     }
 }
+/* Carousel Container */
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
 
+.carousel {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+.carousel-item {
+  flex: 0 0 20%; /* Adjust for the number of items visible */
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.carousel-item img {
+  max-width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.carousel-item p {
+  font-size: 16px;
+  color: #333;
+}
+
+.carousel-item:hover {
+  transform: scale(1.1);
+}
+
+.carousel-item img:hover {
+  transform: rotate(10deg) scale(1.2);
+}
+
+/* Animation for scrolling effect */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* Carousel Container */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #0e0d0d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .carousel {
+    display: flex;
+    justify-content: start;
+    animation: scroll 15s linear infinite;
+  }
+  
+  .carousel-item {
+    flex: 0 0 200px; /* Fixed size for all items */
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .carousel-item img {
+    max-width: 100px; /* Fixed size for all logos */
+    height: 100px;
+    object-fit: contain; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .carousel-item p {
+    font-size: 16px;
+    color: #ffffff;
+  }
+  
+  
+  .carousel-item:hover {
+    transform: scale(1.1);
+  }
+  
+  .carousel-item img:hover {
+    transform: rotate(10deg) scale(1.2);
+  }
+  
+  /* Loop Effect for Smooth Transition */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Duplicate the carousel for looping */
+  .carousel::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+  
 @media (max-width: 767px) {
     .intro--banner {
         height: 305px
@@ -923,6 +1038,7 @@ body {
     justify-content: center;
     margin: 0 auto
 }
+
 
 @media (max-width: 1180px) {
     .work {
@@ -1117,242 +1233,102 @@ body {
     }
 }
 
+/* General Styling */
 .about {
-    position: relative;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    width: 900px;
-    max-width: 75%;
-    height: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
+    align-items: center;
     justify-content: center;
-    margin: 0 auto
-}
-
-@media (max-width: 1180px) {
-    .about {
-        max-width: 100%
-    }
-}
-
-.about--banner {
-    position: relative;
-    height: 475px
-}
-
-.about--banner::before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    left: 200px;
-    -webkit-transform: rotate(-25deg);
-    transform: rotate(-25deg);
-    border: 5px solid #0f33ff;
-    border-right-color: transparent;
-    border-bottom-color: transparent
-}
-
-.about--banner::after {
-    content: "";
-    position: absolute;
-    top: 75px;
-    left: 400px;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    width: 10px;
-    height: 10px;
-    background-color: #0f33ff
-}
-
-.about--banner h2 {
-    position: relative;
-    margin-top: 35px;
-    font-size: 68px;
-    font-weight: 900;
-    line-height: 1;
-    z-index: 1
-}
-
-.about--banner h2::before {
-    content: "";
-    position: absolute;
-    top: 60px;
-    left: 268px;
-    width: 30px;
-    height: 30px;
-    background-color: #0f33ff;
-    border-radius: 50%
-}
-
-.about--banner h2::after {
-    content: "";
-    position: absolute;
-    top: 255px;
-    left: 255px;
-    width: 10px;
-    height: 10px;
-    background-color: #0f33ff
-}
-
-.about--banner a {
-    padding: 5px 17px 5px 0;
-    text-decoration: none;
+    min-height: 100vh; /* Center content vertically */
+    padding: 40px 20px;
     color: #fff;
-    font-weight: 700;
-    text-transform: uppercase;
-    background-color: transparent
+    background: #0c0c0c;
 }
 
-.about--banner a:hover svg {
-    left: 10px
+.highlights-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #ffffff;
+    text-align: center;
 }
 
-.about--banner a svg {
-    position: relative;
-    left: 5px;
-    width: 15px;
-    fill: #fff;
-    -webkit-transition: left .2s ease-in-out;
-    transition: left .2s ease-in-out
-}
-
-.about--banner img {
-    position: absolute;
-    bottom: -90px;
-    right: -12px
-}
-
-.about--options {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
+.about--content {
     display: flex;
-    max-width: 600px;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    list-style: none
+    flex-direction: row-reverse; /* Image on the right, card on the left */
+    align-items: center;
+    gap: 40px; /* Space between image and card */
+    text-align: left;
 }
 
-.about--options>a {
-    position: relative;
-    width: 150px;
-    height: 75px;
-    text-decoration: none;
+.about--content img.about-visual {
+    max-width: 250px;
+    border-radius: 10px;
+    flex-shrink: 0;  
+}
+
+.highlights-card {
+    background-color: #0c0c0c;
+    padding: 20px;
+    flex: 1;
     color: #fff;
-    border: 10px solid #0f33ff;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat
+    text-align: left;
 }
 
-.about--options>a:nth-child(1) {
-    background-image: url("../img/about-winners.jpg")
+.highlights-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.about--options>a:nth-child(2) {
-    background-image: url("../img/about-philosophy.jpg")
-}
-
-.about--options>a:nth-child(3) {
-    background-image: url("../img/about-history.jpg")
-}
-
-.about--options>a:hover h3 {
-    bottom: -50px
-}
-
-.about--options h3 {
-    position: absolute;
-    bottom: -38px;
-    left: 10px;
+.highlights-card ul li {
     font-size: 16px;
-    text-transform: uppercase;
-    -webkit-transition: bottom .2s ease-in-out, left .2s ease-in-out;
-    transition: bottom .2s ease-in-out, left .2s ease-in-out
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-@media (max-width: 767px) {
-    .about--banner {
-        height: 305px
-    }
-
-    .about--banner::before {
-        top: 0;
-        left: 125px
-    }
-
-    .about--banner::after {
-        top: 35px;
-        left: 260px
-    }
-
-    .about--banner h2 {
-        margin-top: 10px;
-        font-size: 44px
-    }
-
-    .about--banner h2::before {
-        top: 28px;
-        left: 168px
-    }
-
-    .about--banner h2::after {
-        top: 163px;
-        left: 163px
-    }
-
-    .about--banner img {
-        width: 315px
-    }
+.highlights-card ul li strong {
+    color: #1e90ff;
 }
 
-@media (max-width: 600px) {
-    .about--banner {
-        height: auto
+/* Buttons */
+.about--actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.about--actions .btn {
+    background-color: #1e90ff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.about--actions .btn:hover {
+    background-color: #ff4500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about--content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    .about--banner::before {
-        left: 155px
+    .highlights-card {
+        margin-top: 20px;
     }
 
-    .about--banner::after {
-        left: 310px
-    }
-
-    .about--banner h2 {
-        margin-top: 0;
-        font-size: 55px
-    }
-
-    .about--banner h2::before {
-        top: 43px;
-        left: 214px
-    }
-
-    .about--banner h2::after {
-        top: 205px;
-        left: 205px
-    }
-
-    .about--banner img {
-        display: none
-    }
-
-    .about--options {
-        display: none
+    .about--actions {
+        flex-direction: column;
     }
 }
 

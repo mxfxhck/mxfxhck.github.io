@@ -829,7 +829,7 @@ body {
     }
 
     .intro--banner h1 {
-        font-size: 36px; /* Decrease font size for smaller screens */
+        font-size: 30px; /* Decrease font size for smaller screens */
     }
 
     .intro--banner img {

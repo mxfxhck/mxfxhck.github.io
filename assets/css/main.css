@@ -821,18 +821,26 @@ body {
     margin-bottom: 0
 }
 
-@media (max-width: 900px) {
+@media (max-width: 767px) {
     .intro--banner {
-        height: 380px
+        height: auto; /* Allow auto-height */
+        text-align: center; /* Center align text for mobile */
+        padding: 20px 0; /* Add padding around content */
     }
 
     .intro--banner h1 {
-        font-size: 55px
+        font-size: 36px; /* Decrease font size for smaller screens */
     }
 
     .intro--banner img {
-        width: 430px
+        display: none; /* Hide the image for smaller screens */
     }
+
+    .intro--banner button {
+        margin-top: 15px; /* Add spacing between text and button */
+    }
+}
+
 
     .intro--options>a {
         margin-right: 30px
@@ -841,7 +849,14 @@ body {
     .intro--options>a:last-child {
         margin-right: 0
     }
-}
+
+@media (max-width: 767px) {
+    .intro {
+        max-width: 90%; /* Reduce max-width for mobile */
+        padding: 10px; /* Add padding for spacing */
+        }
+    }
+    
 /* Carousel Container */
 .carousel-container {
   width: 100%;
@@ -1259,6 +1274,7 @@ body {
     align-items: center;
     gap: 40px; /* Space between image and card */
     text-align: left;
+    justify-content: center;
 }
 
 .about--content img.about-visual {
@@ -1273,6 +1289,8 @@ body {
     flex: 1;
     color: #fff;
     text-align: left;
+    max-width: 500px;
+    width: 100%;
 }
 
 .highlights-card ul {
@@ -1298,6 +1316,7 @@ body {
     margin-top: 20px;
     display: flex;
     gap: 20px;
+    justify-content: center;
 }
 
 .about--actions .btn {
@@ -1317,18 +1336,42 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .about {
+        padding: 20px 10px; /* Reduce padding on small screens */
+    }
+
+    .highlights-title {
+        font-size: 32px; /* Adjust title size for mobile */
+        margin-bottom: 20px;
+    }
+
     .about--content {
-        flex-direction: column;
+        flex-direction: column; /* Stack content vertically on mobile */
         align-items: center;
-        text-align: center;
+        gap: 20px; /* Reduce gap between content */
+    }
+
+    .about--content img.about-visual {
+        max-width: 200px; /* Adjust image size for smaller screens */
     }
 
     .highlights-card {
-        margin-top: 20px;
+        text-align: center; /* Center the card content on mobile */
+        padding: 15px;
+    }
+
+    .highlights-card ul li {
+        font-size: 14px; /* Slightly smaller text on mobile */
     }
 
     .about--actions {
         flex-direction: column;
+        gap: 15px; /* Reduce gap between buttons on mobile */
+    }
+
+    .about--actions .btn {
+        padding: 12px 25px; /* Increase button padding for better touch interaction */
+        font-size: 16px; /* Reduce button font size */
     }
 }
 

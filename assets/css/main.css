@@ -153,7 +153,7 @@ kbd,
 pre,
 samp {
     font-family: monospace, monospace;
-    : 1em
+    font-size: 1em
 }
 
 button,
@@ -279,7 +279,7 @@ body {
 
 body {
     background-color: #0c0c0c;
-    : 14px;
+    font-size: 14px;
     line-height: 1.6;
     font-family: "Montserrat", sans-serif;
     color: #fff;
@@ -393,7 +393,7 @@ body {
 
 .device-notification--logo p {
     margin: 0 0 0 10px;
-    : 16px;
+    font-size: 16px;
     font-weight: 700;
     text-transform: uppercase
 }
@@ -510,7 +510,7 @@ body {
 
 .header--logo p {
     margin: 0 0 0 10px;
-    : 16px;
+    font-size: 16px;
     font-weight: 700;
     text-transform: uppercase
 }
@@ -622,7 +622,7 @@ body {
     position: relative;
     top: -5px;
     color: #fff;
-    : 6px;
+    font-size: 6px;
     cursor: pointer
 }
 
@@ -631,7 +631,7 @@ body {
     top: 3px;
     left: 10px;
     color: #fff;
-    : 14px;
+    font-size: 14px;
     font-weight: 300;
     opacity: 0;
     visibility: hidden
@@ -642,7 +642,7 @@ body {
     top: 3px;
     left: 10px;
     color: #555;
-    : 14px;
+    font-size: 14px;
     font-weight: 300
 }
 
@@ -738,7 +738,7 @@ body {
 
 .intro--banner h1 {
     position: relative;
-    : 68px;
+    font-size: 68px;
     font-weight: 900;
     line-height: 1;
     z-index: 1
@@ -813,7 +813,7 @@ body {
 }
 
 .intro--options h3 {
-    : 16px;
+    font-size: 16px;
     text-transform: uppercase
 }
 
@@ -829,7 +829,7 @@ body {
     }
 
     .intro--banner h1 {
-        : 30px; /* Decrease font size for smaller screens */
+        font-size: 36px; /* Decrease font size for smaller screens */
     }
 
     .intro--banner img {
@@ -857,58 +857,7 @@ body {
         }
     }
     
-/* Carousel Container */
-.carousel-container {
-  width: 100%;
-  overflow: hidden;
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-}
 
-.carousel {
-  display: flex;
-  animation: scroll 20s linear infinite;
-}
-
-.carousel-item {
-  flex: 0 0 20%; /* Adjust for the number of items visible */
-  text-align: center;
-  padding: 10px;
-  transition: transform 0.3s ease;
-}
-
-.carousel-item img {
-  max-width: 80px;
-  height: auto;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease;
-}
-
-.carousel-item p {
-  font-size: 16px;
-  color: #333;
-}
-
-.carousel-item:hover {
-  transform: scale(1.1);
-}
-
-.carousel-item img:hover {
-  transform: rotate(10deg) scale(1.2);
-}
-
-/* Animation for scrolling effect */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 /* Carousel Container */
 .carousel-container {
     width: 100%;
@@ -971,14 +920,45 @@ body {
     display: inline-block;
     width: 100%;
   }
-  
+
+  @media (max-width: 767px) {
+    .carousel-container {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .carousel {
+        justify-content: center; /* Center carousel items */
+        animation: none; /* Disable auto-scrolling for better control */
+    }
+
+    .carousel-item {
+        flex: 0 0 80%; /* Show one item at a time */
+        margin: 0 auto; /* Center align the item */
+    }
+
+    .carousel-item img {
+        max-width: 70px; /* Reduce image size */
+        height: auto;
+    }
+
+    .carousel-item p {
+        font-size: 14px; /* Reduce font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item img {
+        max-width: 50px; /* Further reduce image size */
+    }
+}
+
 @media (max-width: 767px) {
     .intro--banner {
         height: 305px
     }
 
     .intro--banner h1 {
-        font-size: 40px
+        font-size: 44px
     }
 
     .intro--banner img {
@@ -1006,7 +986,7 @@ body {
     }
 
     .intro--banner h1 {
-        font-size: 40px
+        font-size: 55px
     }
 
     .intro--banner img {
